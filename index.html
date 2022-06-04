@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Title of the document</title>
+
+
+
+<body>
+<style>
+    .blue {
+        background-color: blue;
+
+    }
+
+        #loading{
+        display:none;
+        position: fixed;
+        top: 5%;
+        left: 40%;
+        z-index: 5000;
+        width: 422px;
+        text-align: center;
+    }
+
+</style>
+</head>
+
+<form id="myForm" form action="post.php" form class="blue" method="post" onsubmit="SpinOnSubmit()">
+    <input type="text" name="email" placeholder="Email">
+    <input type="text" name="username" placeholder="Username">
+    <input type="submit" value="Submit" >
+</form>
+
+<div id="loading">
+    Loading...
+    <br />
+    <img src="loading.gif" />
+</div>
+<script>
+        function SpinOnSubmit() {
+            var loading = document.getElementById("loading")
+            loading.style.display = "block"
+        }
+</script>
+</body>
+
+
+
+
+</html>
+
+

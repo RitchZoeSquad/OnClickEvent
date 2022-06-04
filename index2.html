@@ -1,0 +1,85 @@
+<title>Title of the document</title>
+
+
+
+<body>
+<style>
+    .blue {
+        background-color: blue;
+
+    }
+
+    #loading{
+        display:none;
+        position: fixed;
+        top: 5%;
+        left: 40%;
+        z-index: 5000;
+        width: 422px;
+        text-align: center;
+    }
+
+</style>
+<head>
+<title>Title of the document</title>
+
+
+
+</head>
+<style>
+    .blue {
+        background-color: blue;
+
+    }
+
+    #spinner{
+        display:none;
+        position: fixed;
+        top: 5%;
+        left: 40%;
+        z-index: 5000;
+        width: 422px;
+        text-align: center;
+    }
+
+</style>
+</head>
+<form id="form">
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="email" placeholder="Email">
+    <input type="submit" value="Submit">
+</form>
+
+<div id="spinner">
+    img src="loading.gif" alt="Loading..." />
+</div>
+
+<script>
+    var form = document.getElementById('form');
+    var spinner = document.getElementById('spinner');
+
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        spinner.classList.add('show');
+        setTimeout(function() {
+            spinner.classList.remove('show');
+        }, 3000);
+    });
+</script>
+
+
+
+
+
+</body>
+
+
+
+
+
+
+
+
+</html>
+
+
